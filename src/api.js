@@ -109,8 +109,28 @@ export function PHOTO_DELETE(id) {
 	};
 }
 
-// export function PHOTOS_GET(id) {
-// 	return {
-// 		url: `${API_URL}/api/photo/${id}`,
-// 	};
-// }
+export function PASSWORD_LOST(body) {
+	return {
+		url: `${API_URL}/api/password/lost`,
+		options: {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(body),
+		},
+	};
+}
+
+export function PASSWORD_RESET(body) {
+	return {
+		url: `${API_URL}/api/password/reset`,
+		options: {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(body),
+		},
+	};
+}
